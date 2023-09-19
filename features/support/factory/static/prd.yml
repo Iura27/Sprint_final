@@ -1,0 +1,11 @@
+operation_transfer: 'TRANSFERÊNCIA'
+operation_extrato: 'EXTRATO'
+
+user_for_login:
+  email: 'iura@email.com'
+  password: '1234'
+  confirmpassword: '1234'
+
+
+
+
