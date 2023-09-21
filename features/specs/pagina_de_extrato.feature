@@ -1,4 +1,5 @@
-# language: pt
+#language: pt
+
 
 @regression 
 @pde
@@ -11,6 +12,11 @@ Funcionalidade: Visualizar informações na página de extrato
     Dado que estou na página de extrato
 
   @extrato_view_pde
-  Cenário: Visualizar saldo atual na página de extrato
-    Quando eu estiver na página de extrato
+  Cenário: Visualizar página de extrato
     Então devo ver todas as informações das minhas últimas movimentações
+
+
+  @extrato_to_home
+  Cenário: Voltar para home
+    Quando clico no botão de Voltar
+    Então devo ser redirecionado para home

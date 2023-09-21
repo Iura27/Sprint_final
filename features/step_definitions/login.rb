@@ -15,5 +15,5 @@ end
 
 Então('deverá mostrar a home') do
     @home_page = Pages::Home.new
-    expect(@home_page).to have_transfer_button
+    expect(@home_page).to have_home_buttons
 end

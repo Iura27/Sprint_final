@@ -12,6 +12,8 @@ module Pages
     section :card_register, Sections::Card__Register, '.card__register'
     section :card_login, Sections::Card__Login, '.card__login'
     element :botao_sair, '#btnExit'
+  
+    
 
 
   
@@ -27,6 +29,10 @@ module Pages
         card_register.input_preencher
         close_modal_link.click
         card_login.inputs_login
+    end
+
+    def logout_site
+        botao_sair.click
     end
 
     

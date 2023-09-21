@@ -12,14 +12,12 @@ Funcionalidade: Cadastro de Usuário
 
     @register_page
     Cenário: Cadastro com sucesso
-        Quando insiro meus dados nos inputs corretos
-        E clico no botão 'Cadastrar' 
+        Quando insiro meus dados nos inputs corretos e me cadastro
         Então uma menssagem de sucesso deve ser exibida
 
     @register_diferent_password
     Cenário: Cadastro com senhas diferentes nos inputs
-        Quando eu insiro meus dados nos campos 
-        E insiro uma senha diferente no campo de comfirmção de senha
+        Quando eu insiro meus dados nos inputs com uma senha diferente no campo de confirmação de senha
         Então devo ver uma mensagem de senhas não iguais
 
     

@@ -7,27 +7,23 @@ module Pages
    
     
     element :close_modal_link, 'a#btnCloseModal.styles__Button-sc-8zteav-5'
+    element :container_invalid, '.styles__ContainerContent-sc-8zteav-1.cSdWPv'
+    section :card_register, Sections::Card__Register, '.card__register'
    
 
     def preencher_form
-        email_input_register.set('iura@email.com')
-        name_input.set('Iura')
-        password_input_register.set('1234')
-        password_confirmation_input.set('1234')
-        custom_element.click
-        cadastrar_button.click
-        close_modal_link.click
-        email_input_login.set('iura@email.com')
-        password_input_login.set('1234')
-        acessar_button.click
+        card_register.input_preencher
+    end
 
+    def form_invalid_password
+        card_register.input_preencher_invalid_password
     end
 
     def has_card?
         has_css?('.card__register', visible: true)
     end
 
-    def register_go_page
+    def register_go
         click_button 'Registrar'
     end
         

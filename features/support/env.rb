@@ -11,12 +11,7 @@ puts ENVIRONMENT_CONFIG = YAML.load_file(File.dirname(__FILE__) + "/environment/
 URL = ENVIRONMENT_CONFIG['url']
 
 Capybara.register_driver :my_chrome do |app|
-   #caps = Selenium::WebDriver::Remote::Capabilities.chrome("google::chromeOptions" => {"args" => ['--incognito', --'start-maximized', '--window-size-1420-835']}) 
-   #if ENV['HEADLESS']
-   # caps['google:chromeOptiions']['args'] << '--headles'
-#end
-   #options = { browser: :chrome, desired_capabilities: caps }
-   #Capybara::Selenium::Driver.new(app, options)
+   
 
    options = Selenium::WebDriver::Chrome::Options.new
    options.add_argument('--incognito')
@@ -36,15 +31,31 @@ Capybara.register_driver :my_chrome do |app|
        options.add_argument('--headless')
        options.add_argument('--disable-site-isolation-trials')
    end
-   #client = Selenium::WebDriver::Remote::Http::Default.new
-   #client.read_timeout = 90
-   #options = { browser: :chrome, desired_capabilities: caps, http_client: client }
 
    puts 'Rising driver'
    Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
-
 end
 
-Capybara.default_driver = :my_chrome
+# Adicione a configuração do driver do Firefox
+Capybara.register_driver :my_firefox do |app|
+   options = Selenium::WebDriver::Firefox::Options.new
+   options.add_argument('--headless') if ENV['HEADLESS'] # Opcional: executar em modo headless
+   options.add_argument('--disable-site-isolation-trials')
+   options.add_argument('--start-maximized')
+   
+   # Crie o driver do Firefox
+   Capybara::Selenium::Driver.new(app, browser: :firefox, options: options)
+ end
+
+ # Configuração do driver padrão com base na variável de ambiente BROWSER
+if ENV['BROWSER'] == 'firefox'
+   Capybara.default_driver = :my_firefox
+ else
+   Capybara.default_driver = :my_chrome
+ end
+ 
+ 
+
+
 Capybara.app_host = URL
 Capybara.default_max_wait_time = 10

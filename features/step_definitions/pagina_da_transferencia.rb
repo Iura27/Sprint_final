@@ -18,3 +18,13 @@ Dado('que esteja na página de transferência') do
   Então('devo ver uma mensagem de confirmação de sucesso') do
     expect(@transfer_page_page).to have_modal_container
   end
+
+  Quando('clico no botão de Voltar')do 
+    @transfer_page.button_voltar
+  end
+
+
+  Então('devo ser redirecionado para home') do
+    @home_page = Pages::Home.new
+    expect(@home_page).to have_home_buttons
+  end

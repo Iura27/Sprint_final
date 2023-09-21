@@ -20,6 +20,15 @@ module Sections
         cadastrar_button.click
     end
 
+    def input_preencher_invalid_password
+        email_input_register.set('iura@email.com')
+        name_input.set('Iura')
+        password_input_register.set('1234')
+        password_confirmation_input.set('4321')
+        custom_element.click
+        cadastrar_button.click
+    end
+
    
 
         

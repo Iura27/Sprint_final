@@ -26,3 +26,14 @@ Dado('que esteja na home') do
     @extrato_page = Pages::Extrato.new
     expect(@extrato_page).to have_container_extrato
   end
+
+
+  Quando('eu clico no botão de Sair') do
+    @home_page.logout_site
+  end
+
+  Então('devo ser redirecionado para página de login') do
+    @login_page = Pages::Login.new
+    expect(@login_page).to have_card_login
+  end
+  

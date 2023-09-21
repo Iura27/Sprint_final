@@ -21,13 +21,7 @@ Funcionalidade: Estar na Home
     Quando seleciono o botão da operação de extrato
     Então devo ser redirecionado para a página de visualização de extrato
  
-  
-  @select_existing_operation
-  Cenário: Selecionar uma operação disponível
-    Quando seleciono a "<operação>"
-    Então devo ser redirecionado para a página da operação
-
-    Exemplos:
-      | operação       |
-      | transferência  |
-      | extrato        |
+  @logout
+  Cenario: Deslogar do site
+    Quando eu clico no botão de Sair
+    Então devo ser redirecionado para página de login

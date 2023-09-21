@@ -12,10 +12,10 @@ module Pages
     section :home_buttons, Sections::Home__ContainerButtons, '.home__ContainerButtons-sc-1auj767-13'
     section :card_register, Sections::Card__Register, '.card__register'
     section :card_login, Sections::Card__Login, '.card__login'
-
     element :transfer_form, 'form.styles__ContainerFormTransfer-sc-1oow0wh-0.hehMDu'
     element :close_modal_link, 'a#btnCloseModal.styles__Button-sc-8zteav-5'
     element :modal_container, '.styles__ContainerContent-sc-8zteav-1.cSdWPv'
+    element :container_back_button, '.transfer__ContainerBackButton-sc-1yjpf2r-4.dnIDnp'
 
 
     def preencher_formulario_de_transferencia
@@ -40,6 +40,13 @@ module Pages
     def click_transfer(texto_do_botao)
         find("button.style__ContainerButton-sc-1wsixal-0.CMabB.button__child", text: texto_do_botao).click
       end
+
+
+
+    def button_voltar
+        container_back_button.click
+    end
+
       
       
     
