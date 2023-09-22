@@ -8,7 +8,7 @@ Funcionalidade: Estar na Home
   PARA poder efetuar essas operações
 
   Contexto: Estar na home
-    Dado que esteja na home
+    Dado que esteja na página de home 
 
   @select_transfer
   Cenário: Selecionar operação 'TRASNFERÊNCIA'

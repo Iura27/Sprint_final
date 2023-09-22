@@ -9,6 +9,8 @@ module Pages
     element :close_modal_link, 'a#btnCloseModal.styles__Button-sc-8zteav-5'
     element :container_invalid, '.styles__ContainerContent-sc-8zteav-1.cSdWPv'
     section :card_register, Sections::Card__Register, '.card__register'
+    element :campo_obrigatorio, 'p.input__warging'
+    element :cadastrar_button, 'button.style__ContainerButton-sc-1wsixal-0.CMabB.button__child'
    
 
     def preencher_form
@@ -25,6 +27,10 @@ module Pages
 
     def register_go
         click_button 'Registrar'
+    end
+
+    def blank_register
+        card_register.register_blank
     end
         
       

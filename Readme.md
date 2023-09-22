@@ -6,7 +6,7 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
 
-<img src="imagem.png" alt="Exemplo imagem">
+<img src="image.png" alt="Exemplo imagem">
 
 > Nesta sprint, concentramos nosssos esforços em aprimorar a qualidade e a eficiência do projeto BugBank, um site voltado para que a comunidade possa aprimorar suas habilidades em automatização de testes. Além disso foi realizados muitas outras etapas essenciais na vida profissional de um testador, como podemos ver abaixo.
 

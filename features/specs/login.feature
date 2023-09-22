@@ -10,19 +10,17 @@ Funcionalidade: Login
     Contexto: Estar na página de login
         Dado que esteja na página de login
 
-    @login_go
-    Cenário: Carregar Pagina de login
-        Então deverá mostar logo
-        E clicar em Registrar
-
-    @do_login
+    @grupo1
+    @do-login
     Cenário: Fazer login
         Quando faço meu registro primeiro inserindo os dados nos inputs
-        E depois faço login inserindo os dados nos inputs
+        E faço login inserindo os dados cadastrados nos inputs
         Então deverá mostrar a home
-
+   
+    @grupo1
     @invalid_login
     Cenário: Login inválido
-        Quando faço meu login com uma senha ou email diferente do cadastrado
+        Quando faço meu registro primeiro inserindo os dados nos inputs
+        E faço meu login com uma senha diferente da senha cadastrada
         Então deverá ser exibida uma mensagem de usuário ou senha inválido
     

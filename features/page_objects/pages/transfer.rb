@@ -15,7 +15,9 @@ module Pages
     element :transfer_form, 'form.styles__ContainerFormTransfer-sc-1oow0wh-0.hehMDu'
     element :close_modal_link, 'a#btnCloseModal.styles__Button-sc-8zteav-5'
     element :modal_container, '.styles__ContainerContent-sc-8zteav-1.cSdWPv'
-    element :container_back_button, '.transfer__ContainerBackButton-sc-1yjpf2r-4.dnIDnp'
+    element :container_back_button, 'div.transfer__ContainerBackButton-sc-1yjpf2r-4.dnIDnp'
+    element :invalid_transfer, '.styles__ContainerContent-sc-8zteav-1.cSdWPv'
+    element :transfer_button, 'button.style__ContainerButton-sc-1wsixal-0.CMabB.button__child'
 
 
     def preencher_formulario_de_transferencia

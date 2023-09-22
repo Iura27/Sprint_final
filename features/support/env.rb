@@ -5,6 +5,10 @@ require 'rspec'
 require 'capybara/cucumber'
 require 'site_prism'
 require 'pry'
+require 'parallel_tests'
+
+Encoding.default_external = Encoding::UTF_8
+Encoding.default_internal = Encoding::UTF_8
 
 ENVIRONMENT = ENV['ENVIRONMENT']
 puts ENVIRONMENT_CONFIG = YAML.load_file(File.dirname(__FILE__) + "/environment/#{ENVIRONMENT}.yml")
@@ -59,3 +63,6 @@ if ENV['BROWSER'] == 'firefox'
 
 Capybara.app_host = URL
 Capybara.default_max_wait_time = 10
+
+
+

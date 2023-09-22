@@ -1,0 +1,4 @@
+# config/parallel_tests.yml
+---
+  test_framework: :cucumber
+  # Outras configurações específicas, se necessário

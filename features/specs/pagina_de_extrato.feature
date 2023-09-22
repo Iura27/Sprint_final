@@ -11,11 +11,12 @@ Funcionalidade: Visualizar informações na página de extrato
   Contexto: Estar na página de extrato
     Dado que estou na página de extrato
 
+  @grupo2
   @extrato_view_pde
   Cenário: Visualizar página de extrato
     Então devo ver todas as informações das minhas últimas movimentações
 
-
+  @grupo2
   @extrato_to_home
   Cenário: Voltar para home
     Quando clico no botão de Voltar

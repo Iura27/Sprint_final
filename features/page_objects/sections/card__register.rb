@@ -29,6 +29,14 @@ module Sections
         cadastrar_button.click
     end
 
+    def register_blank
+        email_input_register.set(' ')
+        name_input.set(' ')
+        password_input_register.set(' ')
+        password_confirmation_input.set(' ')
+        custom_element.click
+    end
+
    
 
         

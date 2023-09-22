@@ -15,16 +15,21 @@ Dado('que esteja na página de transferência') do
   end
   
   
-  Então('devo ver uma mensagem de confirmação de sucesso') do
-    expect(@transfer_page_page).to have_modal_container
-  end
+  #Então('devo ver uma mensagem de confirmação de sucesso') do
+   # expect(@transfer_page_page).to have_modal_container
+  #end
 
-  Quando('clico no botão de Voltar')do 
+  Quando('clico no botão em Voltar')do 
     @transfer_page.button_voltar
   end
 
 
-  Então('devo ser redirecionado para home') do
+  Então('devo voltar para página home') do
     @home_page = Pages::Home.new
     expect(@home_page).to have_home_buttons
+  end
+
+
+  Então('devo ver uma mensagem de conta inválida') do
+    expect(@transfer_page).to have_invalid_transfer
   end

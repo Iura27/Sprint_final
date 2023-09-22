@@ -9,6 +9,7 @@ module Pages
 
     section :card_register, Sections::Card__Register, '.card__register'
     section :card_login, Sections::Card__Login, '.card__login'
+    element :invalid_login, '.styles__ContainerContent-sc-8zteav-1.cSdWPv'
 
     def preencher_form
       card_register.input_preencher
@@ -16,7 +17,7 @@ module Pages
     end
 
     def form_login
-      card__login.inputs_login
+      card_login.inputs_login
     end
 
     def register_go
@@ -27,5 +28,13 @@ module Pages
       has_css?('.card__register', visible: true)
     
     end
+
+    def login_invalid
+      card_login.email_input_login.set('iura@email.com')
+      card_login.password_input_login.set('123456')
+      card_login.acessar_button.click
+    end
+  
+  
   end
 end

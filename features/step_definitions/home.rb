@@ -1,4 +1,4 @@
-Dado('que esteja na home') do
+Dado('que esteja na página de home') do
     @home_page = Pages::Home.new
     @home_page.load
     @home_page.enter_home
