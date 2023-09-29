@@ -11,7 +11,7 @@ end
 
 
 Então('uma menssagem de sucesso deve ser exibida') do
-  expect(@register_page).to have_close_modal_link
+  expect(@register_page).to have_close_button
 end
 
 

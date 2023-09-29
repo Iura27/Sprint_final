@@ -18,6 +18,7 @@ module Pages
     element :container_back_button, 'div.transfer__ContainerBackButton-sc-1yjpf2r-4.dnIDnp'
     element :invalid_transfer, '.styles__ContainerContent-sc-8zteav-1.cSdWPv'
     element :transfer_button, 'button.style__ContainerButton-sc-1wsixal-0.CMabB.button__child'
+    element :close_button, '.styles__ContainerCloseButton-sc-8zteav-2.ffzYTz a'
 
 
     def preencher_formulario_de_transferencia
@@ -29,7 +30,7 @@ module Pages
         click_button 'Registrar'
         has_css?('.card__register', visible: true)
         card_register.input_preencher
-        close_modal_link.click
+        close_button.click
         card_login.inputs_login
     end
 

@@ -6,14 +6,16 @@ module Pages
     set_url '/'
 
     element :close_modal_link, 'a#btnCloseModal.styles__Button-sc-8zteav-5'
-
+    element :close_button, '.styles__ContainerCloseButton-sc-8zteav-2.ffzYTz a'
     section :card_register, Sections::Card__Register, '.card__register'
     section :card_login, Sections::Card__Login, '.card__login'
     element :invalid_login, '.styles__ContainerContent-sc-8zteav-1.cSdWPv'
+    
+
 
     def preencher_form
       card_register.input_preencher
-      close_modal_link.click
+      close_button.click
     end
 
     def form_login

@@ -12,6 +12,7 @@ module Pages
     section :card_register, Sections::Card__Register, '.card__register'
     section :card_login, Sections::Card__Login, '.card__login'
     element :botao_sair, '#btnExit'
+    element :close_button, '.styles__ContainerCloseButton-sc-8zteav-2.ffzYTz a'
   
     
 
@@ -27,7 +28,7 @@ module Pages
         click_button 'Registrar'
         has_css?('.card__register', visible: true)
         card_register.input_preencher
-        close_modal_link.click
+        close_button.click
         card_login.inputs_login
     end
 

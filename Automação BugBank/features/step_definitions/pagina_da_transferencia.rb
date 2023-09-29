@@ -15,9 +15,9 @@ Dado('que esteja na página de transferência') do
   end
   
   
-  #Então('devo ver uma mensagem de confirmação de sucesso') do
-   # expect(@transfer_page_page).to have_modal_container
-  #end
+  Então('devo ver uma mensagem de confirmação de sucesso') do
+    expect(@transfer_page_page).to have_modal_container
+  end
 
   Quando('clico no botão em Voltar')do 
     @transfer_page.button_voltar

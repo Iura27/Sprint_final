@@ -11,10 +11,12 @@ module Pages
     section :card_register, Sections::Card__Register, '.card__register'
     element :campo_obrigatorio, 'p.input__warging'
     element :cadastrar_button, 'button.style__ContainerButton-sc-1wsixal-0.CMabB.button__child'
+    element :close_button, '.styles__ContainerCloseButton-sc-8zteav-2.ffzYTz a'
    
 
     def preencher_form
         card_register.input_preencher
+        close_button.click
     end
 
     def form_invalid_password

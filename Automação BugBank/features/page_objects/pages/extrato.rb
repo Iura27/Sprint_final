@@ -15,12 +15,13 @@ module Pages
     element :close_modal_link, 'a#btnCloseModal.styles__Button-sc-8zteav-5'
     element :container_transactions, '.bank-statement__ContainerTransactions-sc-7n8vh8-8.CUAzQ'
     element :container_back_button, '.bank-statement__ContainerBackButton-sc-7n8vh8-5.kKAsAS'
-
+    element :close_button, '.styles__ContainerCloseButton-sc-8zteav-2.ffzYTz a'
+    
     def enter_home
         click_button 'Registrar'
         has_css?('.card__register', visible: true)
         card_register.input_preencher
-        close_modal_link.click
+        close_button.click
         card_login.inputs_login
     end
 
